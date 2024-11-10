@@ -7,12 +7,12 @@
  * @return {Object[]}
  */
 function transformStateWithClones(state, actions) {
-  let curentState = { ...state };
+  let currentState = { ...state };
   const stateArr = [];
 
   for (let i = 0; i < actions.length; i++) {
     const action = actions[i];
-    const st = { ...curentState };
+    const st = { ...currentState };
 
     switch (action.type) {
       case 'addProperties':
@@ -34,7 +34,7 @@ function transformStateWithClones(state, actions) {
         break;
     }
 
-    curentState = st;
+    currentState = st;
     stateArr.push(st);
   }
 
