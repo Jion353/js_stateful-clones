@@ -32,6 +32,8 @@ function transformStateWithClones(state, actions) {
           delete st[key];
         }
         break;
+      default:
+        break;
     }
 
     currentState = st;
